@@ -22,10 +22,11 @@ export const Fish = (props: IFishProps) => {
       key={id}
       position={{ x, y, z }}
       rotation={{ z: toDeg(angleZ) - 90, y: toDeg(angleY), x: 0 }}
-      scale={mass * mass / 10}
+      scale={mass * mass / 5}
       segmentsRadial={3}
       transition={{
-        position: { duration: 200 }
+        position: { duration: 200 },
+        rotation: { duration: 50 }
       }}
       color={
         id === 0

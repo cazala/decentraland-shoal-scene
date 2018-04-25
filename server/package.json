@@ -21,6 +21,6 @@
     "ws": "^4.0.0"
   },
   "dependencies": {
-    "shoaling": "^0.1.0"
+    "shoaling": "^0.1.1"
   }
 }
