@@ -12,10 +12,6 @@ export const Fish = (props: IFishProps) => {
   const x = location.x / 60
   const y = location.y / 60
   const z = location.z / 60
-  const safeX = Math.max(Math.min(19.5, x), 0.5)
-  const safeY = Math.max(Math.min(10, y), 0.5)
-  const safeZ = Math.max(Math.min(19.5, z), 0.5)
-  const scale = (mass - 0.5) * 5 + 0.5
   const [angleZ, angleY] = velocity.angles()
   return (
     <cone
@@ -26,7 +22,7 @@ export const Fish = (props: IFishProps) => {
       segmentsRadial={3}
       transition={{
         position: { duration: 200 },
-        rotation: { duration: 50 }
+        rotation: { duration: 200 }
       }}
       color={
         id === 0
