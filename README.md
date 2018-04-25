@@ -1,10 +1,12 @@
 # Dentraland Shoal Scene
 
+<img width="894" alt="screen shot 2018-04-25 at 5 55 30 pm" src="https://user-images.githubusercontent.com/2781777/39272307-f1513cba-48b1-11e8-8585-a8056751d4e8.png">
+
 This is an experiment using [Decentraland's SDK](https://developers.decentraland.org/). The idea was to bring the fish from [my personal site](https://caza.la) to the Metaverse.
 
 The state is kept on a server (so every visitor would see the fish on the same positions) and the scene is being render on the server as well and broadcasted to each client. I used a modified flocking algorithm to make the creatures shoal together, and added a big blue one that chases the smaller ones.
 
-Here's a short video of the result: [tweet](https://twitter.com/juancazala/status/989244724715360256)
+Here's a short video of the result: [LINK](https://twitter.com/juancazala/status/989244724715360256)
 
 # Try it out!
 
