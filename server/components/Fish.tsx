@@ -12,27 +12,42 @@ export const Fish = (props: IFishProps) => {
   const x = location.x / 60
   const y = location.y / 60
   const z = location.z / 60
-  const [angleZ, angleY] = velocity.angles()
-  return (
-    <cone
+  const angleY = Math.atan2(velocity.x, velocity.z)
+  return id == 0 ? (
+    <gltf-model
+      src="http://localhost:8087/assets/shark.gltf"
       key={id}
       position={{ x, y, z }}
-      rotation={{ z: toDeg(angleZ) - 90, y: toDeg(angleY), x: 0 }}
-      scale={mass * mass / 5}
-      segmentsRadial={3}
+      scale={mass * mass / 10}
+      rotation={{ z: 0, y: toDeg(angleY) + 180, x: velocity.y * 4 }}
       transition={{
         position: { duration: 200 },
         rotation: { duration: 200 }
       }}
-      color={
-        id === 0
-          ? 'blue'
-          : behaviour === 'avoid'
-            ? 'red'
-            : behaviour === 'wander'
-              ? 'gray'
-              : 'black'
+      skeletalAnimation={
+        behaviour === 'chase'
+          ? [
+              { clip: 'shark_skeleton_bite', playing: true, loop: true },
+              { clip: 'shark_skeleton_swim', weight: 2.0, playing: true }
+            ]
+          : [
+              { clip: 'shark_skeleton_bite', playing: false },
+              { clip: 'shark_skeleton_swim', weight: 2.0, playing: true }
+            ]
       }
+    />
+  ) : (
+    <gltf-model
+      src="http://localhost:8087/assets/bichi.gltf"
+      key={id}
+      position={{ x, y, z }}
+      scale={mass * mass / 8}
+      rotation={{ z: 0, y: toDeg(angleY), x: -velocity.y * 5 }}
+      transition={{
+        position: { duration: 200 },
+        rotation: { duration: 200 }
+      }}
+      skeletalAnimation={[{ clip: 'animation_0', playing: true, weight: 10 }]}
     />
   )
 }

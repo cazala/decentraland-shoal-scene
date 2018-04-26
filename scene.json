@@ -8,8 +8,8 @@
     "email": "juan@decentraland.org"
   },
   "scene": {
-    "parcels": ["-87,-127", "-86,-127", "-87,-126", "-86,-126"],
-    "base": "-87,-126"
+    "parcels": ["-35,-130", "-34,-130", "-35,-131", "-34,-131"],
+    "base": "-35,-130"
   },
   "communications": {
     "type": "webrtc",

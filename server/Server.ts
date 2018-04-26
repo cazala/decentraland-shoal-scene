@@ -12,6 +12,7 @@ const cors = require('cors')
 const app = express()
 
 app.use(cors())
+app.use('/assets', express.static('./assets'))
 
 const server = createServer(app)
 const wss = new WebSocketServer({ server })
@@ -32,8 +33,9 @@ server.listen(8087, function listening() {
 })
 
 // Sea
-const sea = new Sea(50, 1200, 300, 1200, 200)
+const sea = new Sea(70, 1200, 300, 1200, 200)
 sea.start(64)
+sea.on('update', (fish: any) => fish.velocity.mul(0.97))
 setInterval(() => {
   render(sea)
   updateAll()
