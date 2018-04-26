@@ -12,7 +12,6 @@ const cors = require('cors')
 const app = express()
 
 app.use(cors())
-app.use('/assets', express.static('./assets'))
 
 const server = createServer(app)
 const wss = new WebSocketServer({ server })

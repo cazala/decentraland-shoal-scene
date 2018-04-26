@@ -15,7 +15,7 @@ export const Fish = (props: IFishProps) => {
   const angleY = Math.atan2(velocity.x, velocity.z)
   return id == 0 ? (
     <gltf-model
-      src="http://localhost:8087/assets/shark.gltf"
+      src="https://caza.la/decentraland-shoal-scene/shark.gltf"
       key={id}
       position={{ x, y, z }}
       scale={mass * mass / 10}
@@ -38,7 +38,7 @@ export const Fish = (props: IFishProps) => {
     />
   ) : (
     <gltf-model
-      src="http://localhost:8087/assets/bichi.gltf"
+      src="https://caza.la/decentraland-shoal-scene/bichi.gltf"
       key={id}
       position={{ x, y, z }}
       scale={mass * mass / 8}
