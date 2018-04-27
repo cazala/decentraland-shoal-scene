@@ -3,7 +3,7 @@ import { Sea } from './components/Sea'
 
 let cachedScene: any = null
 export function render(sea: any) {
-  cachedScene = Sea({ sea }) as any
+  cachedScene = <Sea sea={sea} />
 }
 
 export default class RemoteScene extends ScriptableScene {

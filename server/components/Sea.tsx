@@ -7,7 +7,6 @@ export interface ISeaProps {
 
 export const Sea = (props: ISeaProps) => {
   const { sea } = props
-  return sea.fish.map((fish: any) => {
-    return Fish({ fish })
+  return <entity>{sea.fish.map((fish: any) => <Fish fish={fish} />)}</entity>
   })
 }
