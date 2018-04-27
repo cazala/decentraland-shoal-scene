@@ -11,7 +11,7 @@ export const Sea = (props: ISeaProps) => {
     <entity>
       {sea.fish.map((fish: any) => Fish({fish}))}
       <gltf-model
-        src="https://caza.la/decentraland-shoal-scene/Underwater_v2.gltf"
+        src="https://caza.la/decentraland-shoal-scene/Underwater_v3.gltf"
         scale={0.55}
         position={{
           x: 10.5,
