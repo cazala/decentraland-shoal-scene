@@ -10,16 +10,15 @@ export const Sea = (props: ISeaProps) => {
   return (
     <entity>
       {sea.fish.map((fish: any) => Fish({fish}))}
-      <obj-model
-          src="https://caza.la/decentraland-shoal-scene/Underwater.obj"
-          mtl="https://caza.la/decentraland-shoal-scene/Underwater.mtl"
-          scale={0.55}
-          position={{
-            x: 10.5,
-            y: -0.55,
-            z: 10.5
-          }}
-        />
+      <gltf-model
+        src="https://caza.la/decentraland-shoal-scene/Underwater_v2.gltf"
+        scale={0.55}
+        position={{
+          x: 10.5,
+          y: -0.55,
+          z: 10.5
+        }}
+      />
     </entity>
   )
 }
