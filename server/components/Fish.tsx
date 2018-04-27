@@ -18,7 +18,7 @@ export const Fish = (props: IFishProps) => {
       src="https://caza.la/decentraland-shoal-scene/shark.gltf"
       key={id}
       position={{ x, y, z }}
-      scale={mass * mass / 10}
+      scale={mass * mass / 6}
       rotation={{ z: 0, y: toDeg(angleY) + 180, x: velocity.y * 4 }}
       transition={{
         position: { duration: 200 },
@@ -41,7 +41,7 @@ export const Fish = (props: IFishProps) => {
       src="https://caza.la/decentraland-shoal-scene/bichi.gltf"
       key={id}
       position={{ x, y, z }}
-      scale={mass * mass / 8}
+      scale={mass * mass / 4}
       rotation={{ z: 0, y: toDeg(angleY), x: -velocity.y * 5 }}
       transition={{
         position: { duration: 200 },

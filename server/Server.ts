@@ -28,7 +28,7 @@ server.listen(8087, function listening() {
 })
 
 // sea
-const sea = new Sea(70, 1200, 300, 1200, 200)
+const sea = new Sea(40, 1200, 300, 1200, 200)
 sea.start(64)
 sea.on('update', (fish: any) => fish.velocity.mul(0.97))
 setInterval(() => {
