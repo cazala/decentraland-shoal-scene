@@ -1,7 +1,7 @@
 import { createElement, ScriptableScene, ISimplifiedNode } from 'metaverse-api'
 import { Sea } from './components/Sea'
 
-let cachedScene: any = null
+let cachedScene: ISimplifiedNode | null = null
 export function render(sea: any) {
   cachedScene = Sea({sea})
 }
