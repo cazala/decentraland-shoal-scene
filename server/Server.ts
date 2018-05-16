@@ -20,9 +20,10 @@ server.listen(8087, () => console.log(`Listening on 8087`))
 
 // Sea
 const { Sea } = require('shoaling')
-const sea = new Sea(38, 1200, 300, 1200, 200)
+// simulate 38 fish on a 'sea' of 1200x1200 (X and Z) and 300 deep (Y)
+const sea = new Sea(38, 1200, 300, 1200)
 sea.start(64)
-sea.on('update', (fish: any) => fish.velocity.mul(0.97))
+sea.on('update', (fish: any) => fish.velocity.mul(0.97)) // slow down fish a little
 setInterval(() => {
   render(sea)
   clients.forEach(client => client.forceUpdate())
